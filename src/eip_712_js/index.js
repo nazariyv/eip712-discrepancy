@@ -9,8 +9,8 @@ const signer = new Wallet(privKey);
 console.log("Signer is: ", signer.address);
 
 const domain = {
-    chainId: 0,
     name: '',
+    chainId: 0,
     verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
     version: ''
 };
@@ -31,10 +31,6 @@ const value = {
         email: "steve@jobs.com",
     }
 };
-
-console.log(
-    "Signing this digest: ", _TypedDataEncoder.hash(domain, types, value)
-);
 
 signer._signTypedData(
     domain,
